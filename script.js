@@ -1,16 +1,11 @@
 const clickButton = document.querySelectorAll('.btncarrito')
 const clickButtonCompra = document.getElementById('btncarritocompra')
 const tabla = document.querySelector('.tabla-carrito')
-console.log(clickButtonCompra)
-//console.log(clickButton)
-//console.log(tabla-carrito)
 let carrito = []
-
 
 clickButton.forEach(btn => {
     btn.addEventListener('click', addToCarritoItem)
 })
-
 
 /// Funcion para sacar cuando hacemos click el boton y luego traemos toda la card.
 function addToCarritoItem(e){
@@ -45,7 +40,7 @@ function addItemCarrito(newItem){
     alert.classList.remove('hide')
 
     const inputElemento = tabla.getElementsByClassName('input__element')
-    for(let i =0; i < carrito.length ; i++){
+    for(let i = 0; i < carrito.length ; i++){
         if(carrito[i].title.trim() === newItem.title.trim()){
             carrito[i].cantidad++  
              const inputValue = inputElemento[i]
@@ -60,7 +55,7 @@ function addItemCarrito(newItem){
 
 function renderCarrito(){
     tabla.innerHTML = ''
-    carrito.map(item => {
+    carrito.forEach(item => {
         const tr = document.createElement('tr')
         tr.classList.add('itemCarrito')
         const content = `
@@ -125,7 +120,9 @@ function sumaCantidad(e){
     const title = tr.querySelector('.title').textContent
     carrito.forEach(item =>{
         if(item.title.trim() === title){
-            sumaInput.value < 1 ? (sumaInput.value = 1) : sumaInput.value
+            if(sumaInput.value < 1){
+                sumaInput.value = 1
+            }
             item.cantidad = sumaInput.value
             carritoTotal()
         }
@@ -143,33 +140,26 @@ window.onload = function(){
         renderCarrito()
     }
 }
-
-//console.log(clickButtonCompra)
-clickButtonCompra.addEventListener('click', () => {
-    swal.fire({
-        icon: "info",
-        title: "Usted esta por finalizar su compra",
-        text: "Si desea realizar la compra presione SI en caso contrario para volver al carrito precione NO",
-        showCancelButton: true,
-        confirmButtonText: "Comprar",
-        cancelButtonText: "Cancelar"
-    })
-})
-// clickButtonCompra.onclick = () => {
-//     swal.fire({
-//         icon: "info",
-//         title: "Usted esta por finalizar su compra",
-//         text: "Si desea realizar la compra presione SI en caso contrario para volver al carrito precione NO",
-//         showCancelButton: true,
-//         confirmButtonText: "Comprar",
-//         cancelButtonText: "Cancelar"
-//     }).then((result) => {
-//         if (result == true) {
-//             Swal.fire({
-//                 icon: "success",     
-//                 title: "Gracias por comprar con nosotros",
-//              }
-//             )
-//         }
-//       })
-// }
+// liberia sweet boton de comprar con un pop up!
+clickButtonCompra.onclick = () => {
+    Swal.fire(
+        {
+            icon: "warning",
+            title: "Desea terminar con la compra?",
+            text: "Para confirmar presione Confirmar, en caso de seguir con la compra presion cancelar",
+            showCancelButton: true,
+            confirmButtonText: "Confirmar",
+            cancelButtonText: "Cancelar"
+        }
+    ).then((result) => {
+        if (result) 
+        {
+           Swal.fire(
+            {
+                icon: "success",
+                title: "Gracias por comprar con nosotros",
+            }
+           )
+        } 
+    } );
+}
