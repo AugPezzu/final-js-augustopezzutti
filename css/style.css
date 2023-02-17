@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+
+.text-align-center{
+    text-align: center;
+}
+
+.color-white{
+    color: white;
+}
+/* alerta z-index adelante */
+.alert{
+    z-index: 100;
+}
+/* alertas */
+.hide, .remove-hide{
+    display: none;
+}
+
+
+/* Codigo por partes */
+
+#header{
+    display: flex;
+    background-color: pink;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    padding: 5px 5%;
+    border-bottom: 2px black solid;
+}
+
+
+
+#header img{
+    height: 90px;
+    width: auto; 
+    transition: all 0.5;
+}
+#header .div-01{
+    cursor: pointer; 
+    margin-right: auto;
+}
+
+#header img:hover{
+    transform: scale(1.2);
+    
+}
+
+#header ul{
+    list-style: none;
+    margin: 0;
+}
+
+#header ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+#header ul li:hover{
+    transform: scale(1.1);
+}
+
+#header ul li a:hover{
+    color: white
+}
+
+#header ul li a{
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+}
+
+#header .btn button{
+    font-weight: 700;
+    margin-left: 30px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+#header .btn button:hover{
+    background-color: black;
+    color: pink;
+    border-color: pink ;
+    transform: scale(1.1);
+}
+
+/* banner principal */
+
+#banner-principal{
+    text-align: center;
+    margin: 25px auto 0;
+}
+
+
+/* Body Carrousel */
+
+.carrousel-style{
+margin: 10px auto;
+}
+
+.carrousel-style .color{
+    color: black;
+}
+/* Body Carrito */
+
+
+/* Carrtio de compras*/
+
+#carrito-compras{
+    margin: 25px auto;
+}
+
+.h1-edit{
+    background-color: pink;
+    margin: 20px 83px;
+    border-radius: 10px;
+    color: white; 
+}
+
+.carrito-compras-1{
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5%;
+}
+
+.carrito-compras-1 h5{
+    color: white;
+    margin: 15px;
+}
+
+#carrito-compras h1{
+    text-align: center;
+}
+
+.btn-edit-producto{
+    background-color: pink;
+    color: black;
+    border-color: pink;
+    padding: 10px;
+}
+/* Carrtio de compras*/
+
+ 
+
+/* Carrito html */
+
+.tabla-main{
+    max-width: 1450px;
+    min-height: 100px;
+    margin: 100px auto;
+}
+
+
+.table__productos img{
+    height: 100px;
+    width: auto;
+}
+
+
+.total-edit{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 100px;
+    padding: 50px;
+}
+
+
+.total-edit-1 p{
+    padding: 20px;
+    color: black;
+    padding: 10px 20px;
+    background-color: pink;
+    border-radius: 10px;
+}
+.total-edit a{
+    padding: 10px 20px;
+    background-color: pink;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+/* Carrito html */
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: black;
+    padding: 10px 5%;
+    
+}
+#footer p{
+    color: white;
+    margin: auto;
+    margin-top: 7px;
+}
+
+#footer img{
+    height: 50px;
+    width: auto;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet"></link>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   
+</head>
+<body>
+    <header id="header">
+        <div class="div-01"><img  src="img/logo-main.png" alt="logo de la empresa" ></div>
+        <nav id="navegador">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/pages/form.html">Contacto</a></li>    
+                </ul>
+        </nav>
+        <a href="pages/carrito.html" class="btn"><button>Carrito</button></a>
+    </header>
+    <main>
+        <!-- Alerta Succes-->
+        <div class="alert container position-sticky top-0 alert-success text-center hide" role="alert">
+          Producto añadido al carrito de compras!
+        </div>   
+        <!-- Alerta Succes-->
+
+        <!-- Alerta Danger-->
+        <div class="alert container position-sticky top-0 alert-danger text-center remove-hide" role="alert">
+          Eliminaste un producto/s del carrito de compras!
+        </div>
+        <!-- Alerta Danger-->
+
+        <!-- Carrousel -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/banner-02.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/banner-03.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/banner-04.jpg" alt="Third slide">
+              </div>
+            </div>
+          </div>
+          <!-- Carrousel -->
+
+          <!-- Carritos de compra -->
+          <div id="carrito-compras">
+            <div class="h1-edit">
+            <h1>Compra en Puma el mejor almiento para tu mascota</h1>
+          </div>
+            <div class="carrito-compras-1">
+              <div class="card bg-dark" style="width: 18rem;">
+                <h5 class="card-title text-align-center color-white">Purina Perros 2kg</h5>
+                <img class="card-img-top img-to-carrito" src="img/purina-producto-1.webp" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text color-white">Precio: <span class="precio">$1900</span></p>
+                </div>
+                <div class="d-grid gap-2 btn-edit-producto">
+                  <button class="btn text-aling-center color-pink btncarrito">Ir al Carrito</a>
+                  </div>
+              </div>
+              <div class="card shadow-mb-1 bg-dark" style="width: 18rem;">
+                <h5 class="card-title text-align-center color-white">Purina Gatos 1kg</h5>
+                <img class="card-img-top img-to-carrito" src="img/purina-producto-2.webp" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text color-white">Precio: <span class="precio">$1800</span></p>
+                </div>
+                <div class="d-grid gap-2 btn-edit-producto">
+                  <button class="btn text-aling-center color-pink btncarrito">Ir al Carrito</a>
+                  </div>
+              </div>
+              <div class="card bg-dark" style="width: 18rem;">
+                <h5 class="card-title text-align-center color-white">Purina Gatos 500g</h5>
+                <img class="card-img-top img-to-carrito" src="img/purina-producto-3.webp" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text color-white">Precio: <span class="precio">$1000</span></p>
+                </div>
+                <div class="d-grid gap-2 btn-edit-producto">
+                  <button class="btn text-aling-center color-pink btncarrito">Ir al Carrito</a>
+                  </div>
+              </div>
+              <div class="card bg-dark" style="width: 18rem;">
+                <h5 class="card-title text-align-center color-white">Purina Perros 1kg</h5>
+                <img class="card-img-top img-to-carrito" src="img/purina-producto-4.webp" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text color-white">Precio: <span class="precio">$1500</span></p>         
+                </div>
+                <div class="d-grid gap-2 btn-edit-producto">
+                <button class="btn text-aling-center color-pink btncarrito">Ir al Carrito</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- tabla carrito -->
+          <div>
+            <table class="table table-dark tabla-main">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                  </tr>
+                </thead>
+                <!-- Se ejecuta la funcion para agregar TR -->
+                <tbody class="tabla-carrito">
+                
+                </tbody>
+            </table>
+            <div class="total-edit">
+                <div class="total-edit-1">
+                    <p></p>
+                </div>
+                <div>
+                    <a href="$" id="btncarritocompra">Comprar</a>
+                </div>
+
+            </div>
+        </div>
+        <!-- tabla carrito -->
+
+          <!-- Carritos de compra -->
+          <div id="banner-principal">
+            <img src="img/banner-01.jpg">
+        </div>
+    </main>
+    <footer id="footer">
+        <div><img src="img/logo-footer1.jpg"></div>
+        <div><p>Puma The Best Offers</p></div>
+        <div><img src="img/logo-footer.jpg"></div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>    
+    <script src="script.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
